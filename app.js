@@ -39,7 +39,7 @@ document.getElementById('checkForm').addEventListener('submit',e=>{
   out.scrollIntoView({behavior:'smooth',block:'start'});
 });
 
-const AUDIT_ENDPOINT='https://formsubmit.co/ajax/c87a372e56d6cf4edad095c488ce8929';
+const AUDIT_ENDPOINT='https://formsubmit.co/ajax/39503e9df3f6e78db33e8f0d00a79949';
 document.getElementById('auditForm').addEventListener('submit',async e=>{
   e.preventDefault();const f=e.target;if(!f.reportValidity())return;
   const req=Object.fromEntries(new FormData(f));
@@ -56,6 +56,6 @@ document.getElementById('auditForm').addEventListener('submit',async e=>{
     t.textContent=`Thanks ${req.name.split(' ')[0]} – we've got your request. We'll reply within 2 working days.`;
   }catch(err){
     btn.disabled=false;btn.textContent='Request my free audit';t.hidden=false;
-    t.textContent="Sorry, that didn't send. Please try again, or email nickcresner@gmail.com.";
+    t.textContent="Sorry, that didn't send. Please try again, or email hello@findable.london.";
   }
 });
