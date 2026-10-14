@@ -136,16 +136,17 @@
 <section id="audit" class="audit">
   <h2>Want the full audit?</h2>
   <p>We'll run the full check – map searches and all four AI assistants – and send you a one-page report. Free, no obligation.</p>
-  <p class="note"><b>Heads up:</b> this form is a preview and doesn't send anything yet. Your details stay in your own browser.</p>
   <form id="auditForm">
     <label>Your name<input name="name" required></label>
     <label>Business name<input name="business" required></label>
     <label>Postcode<input name="postcode" required></label>
     <label>Email or mobile<input name="contact" required></label>
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <label class="tick"><input type="checkbox" name="consent" required> I'm happy for Findable to contact me about this audit only.</label>
     <button class="btn" type="submit">Request my free audit</button>
   </form>
   <p id="auditThanks" class="thanks" role="status" hidden></p>
+  <p class="small privacy"><b>Privacy:</b> we collect only what you type here (name, business, postcode, email or mobile, and your self-check score if you did one). We use it only to send your audit and reply to you – never sold or shared for marketing. Submissions are delivered to us by email via FormSubmit. To see or delete your details, email <a href="mailto:nickcresner@gmail.com">nickcresner@gmail.com</a>.</p>
 </section>
 </main>
 

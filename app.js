@@ -39,12 +39,23 @@ document.getElementById('checkForm').addEventListener('submit',e=>{
   out.scrollIntoView({behavior:'smooth',block:'start'});
 });
 
-document.getElementById('auditForm').addEventListener('submit',e=>{
+const AUDIT_ENDPOINT='https://formsubmit.co/ajax/c87a372e56d6cf4edad095c488ce8929';
+document.getElementById('auditForm').addEventListener('submit',async e=>{
   e.preventDefault();const f=e.target;if(!f.reportValidity())return;
-  const req=Object.fromEntries(new FormData(f));req.selfScore=f.dataset.selfScore||null;req.at=new Date().toISOString();
-  const all=JSON.parse(localStorage.getItem('findable_audit_requests')||'[]');all.push(req);
-  localStorage.setItem('findable_audit_requests',JSON.stringify(all));
-  console.log('[Findable] audit request stored locally (MVP – nothing sent):',req);
-  f.hidden=true;const t=document.getElementById('auditThanks');t.hidden=false;
-  t.textContent=`Thanks ${req.name.split(' ')[0]}. Online requests aren't switched on yet, so your details have NOT been sent to us. They're only saved in this browser.`;
+  const req=Object.fromEntries(new FormData(f));
+  if(req._honey)return; // bot
+  delete req.consent;req.consent='yes';req.selfScore=f.dataset.selfScore||'not taken';
+  req._subject='New Findable audit request';req._template='table';req._captcha='false';
+  const btn=f.querySelector('button[type=submit]'),t=document.getElementById('auditThanks');
+  btn.disabled=true;btn.textContent='Sending…';
+  try{
+    const r=await fetch(AUDIT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(req)});
+    const d=await r.json().catch(()=>({}));
+    if(!r.ok||String(d.success)!=='true')throw new Error(d.message||r.status);
+    f.hidden=true;t.hidden=false;
+    t.textContent=`Thanks ${req.name.split(' ')[0]} – we've got your request. We'll reply within 2 working days.`;
+  }catch(err){
+    btn.disabled=false;btn.textContent='Request my free audit';t.hidden=false;
+    t.textContent="Sorry, that didn't send. Please try again, or email nickcresner@gmail.com.";
+  }
 });
