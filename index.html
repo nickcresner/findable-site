@@ -26,7 +26,6 @@
   "description": "Google Business Profile and AI-assistant visibility for local plumbers in North London.",
   "areaServed": [
     {"@type": "AdministrativeArea", "name": "North London"},
-    {"@type": "PostalCodeRangeSpecification", "postalCodeBegin": "N2", "postalCodeEnd": "N12"},
     "N2", "N3", "N12", "EN4", "EN5", "NW7"
   ],
   "priceRange": "£59-£129",
@@ -98,9 +97,9 @@
       <label>Business name<input name="business" required placeholder="e.g. Finchley Flow Plumbing"></label>
       <label>Postcode<input name="postcode" required placeholder="e.g. N3 1AA" autocomplete="postal-code"></label>
     </div>
-    <fieldset id="questions"></fieldset>
+    <fieldset id="questions"><legend class="sr">Your Google profile questions</legend></fieldset>
     <button class="btn" type="submit">Get my score</button>
-    <p class="err" id="err" hidden></p>
+    <p class="err" id="err" role="alert" hidden></p>
   </form>
   <div id="result" hidden></div>
 </section>
@@ -146,7 +145,7 @@
     <label class="tick"><input type="checkbox" name="consent" required> I'm happy for Findable to contact me about this audit only.</label>
     <button class="btn" type="submit">Request my free audit</button>
   </form>
-  <p id="auditThanks" class="thanks" hidden></p>
+  <p id="auditThanks" class="thanks" role="status" hidden></p>
 </section>
 </main>
 

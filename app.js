@@ -13,7 +13,7 @@ const QUESTIONS=[
 ];
 const OPTS=[['yes','Yes',1],['notsure','Not sure',0.3],['no','No',0]];
 const fs=document.getElementById('questions');
-fs.innerHTML=QUESTIONS.map((x,i)=>`<div class="q"><p>${i+1}. ${x.q}</p><div class="opts">${OPTS.map(([v,l])=>`<label><input type="radio" name="${x.id}" value="${v}"><span>${l}</span></label>`).join('')}</div></div>`).join('');
+fs.insertAdjacentHTML('beforeend',QUESTIONS.map((x,i)=>`<div class="q" role="radiogroup" aria-labelledby="q-${x.id}"><p id="q-${x.id}">${i+1}. ${x.q}</p><div class="opts">${OPTS.map(([v,l])=>`<label><input type="radio" name="${x.id}" value="${v}"><span>${l}</span></label>`).join('')}</div></div>`).join(''));
 const pcRe=/^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$|^[A-Z]{1,2}\d[A-Z\d]?$/i;
 const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -25,7 +25,7 @@ document.getElementById('checkForm').addEventListener('submit',e=>{
   err.hidden=!msg;err.textContent=msg;if(msg)return;
   let score=0;const rows=QUESTIONS.map(x=>{const v=f.get(x.id),m=OPTS.find(o=>o[0]===v)[2];score+=x.w*m;return{...x,v,m}});
   score=Math.round(score);
-  const band=score>=80?['Nicely findable','#0f7b6c','You’re in good shape – a few tweaks will keep you ahead.']:score>=50?['Partly findable','#e09f00','Customers can find you, but you’re leaving jobs on the table.']:['Hard to find','#c0392b','Right now most customers will ring someone else first. The good news: it’s quick to fix.'];
+  const band=score>=80?['Nicely findable','#0f7b6c','You’re in good shape – a few tweaks will keep you ahead.']:score>=50?['Partly findable','#9a6700','Customers can find you, but you’re leaving jobs on the table.']:['Hard to find','#c0392b','Right now most customers will ring someone else first. The good news: it’s quick to fix.'];
   const fixes=rows.filter(r=>r.m<1).sort((a,b)=>b.w*(1-b.m)-a.w*(1-a.m));
   const out=document.getElementById('result');
   out.innerHTML=`<div class="score"><div class="ring" style="--p:${score};--c:${band[1]}"><b>${score}</b></div><div><h3 style="margin:0;color:${band[1]}">${band[0]}</h3><p style="margin:.3em 0">${esc(biz)} · ${esc(pc)}</p><p class="small" style="margin:0">${band[2]}</p></div></div>
