@@ -24,7 +24,7 @@ Audience: plumbers in North London: Finchley, Barnet, Muswell Hill, Hendon, Enfi
 - Rolling monthly plans, cancel any time
 
 ## Who's behind it
-- Founded by Nick Cresner, a Finchley local who spent nine years mapping Britain's roads at Navteq and HERE
+- Founded by Nick Cresner, a Finchley local who spent nine years mapping Britain's roads at Navteq and HERE, then worked as a web developer, on a maintenance team and as a property manager.
 
 ## Contact
 Request a free audit via the form at https://findable.london/#audit (submissions are emailed to us; we reply within 2 working days), or email hello@findable.london
