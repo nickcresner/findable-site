@@ -2,16 +2,16 @@
 > Local AI visibility for North London plumbers. We fix Google Business Profiles and help trades show up in ChatGPT, Gemini, Perplexity and Grok.
 
 Site: https://findable.london/
-Audience: plumbers in Finchley, Barnet and North London (N2, N3, N12, EN4, EN5, NW7)
+Audience: plumbers in North London: Finchley, Barnet, Muswell Hill, Hendon, Enfield, Haringey (starting with N2, N3, N12, EN4, EN5, NW7)
 
 ## What we offer
 - Free 2-minute self-check on this site (no login)
 - Free full audit (map searches + AI assistants)
-- Profile Fix-Up: £129 one-off — buy: https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00
-- Findable Monthly: £59/month (first month free) — buy: https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01
-- Findable Plus: £99/month (first month free) — buy: https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02
+- Profile Fix-Up: £129 one-off (also the setup fee for the monthly plans) — buy: https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00
+- Findable Monthly: start with £129 setup, then £59/month (first month free) — buy: https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01
+- Findable Plus: start with £129 setup, then £99/month (first month free) — buy: https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02
 - Missed-Call Catcher add-on: +£39/month — buy: https://buy.stripe.com/fZu14geu32296jm7JR1Jm03
-- The £129 one-off setup fee is paid alongside the monthly plan. A free audit is the recommended first step.
+- A free audit is the recommended first step.
 
 ## How it works
 1. Free audit of Google profile, local map searches and AI answers

@@ -29,15 +29,24 @@ document.getElementById('checkForm').addEventListener('submit',e=>{
   const fixes=rows.filter(r=>r.m<1).sort((a,b)=>b.w*(1-b.m)-a.w*(1-a.m));
   const out=document.getElementById('result');
   out.innerHTML=`<div class="score"><div class="ring" style="--p:${score};--c:${band[1]}"><b>${score}</b></div><div><h3 style="margin:0;color:${band[1]}">${band[0]}</h3><p style="margin:.3em 0">${esc(biz)} · ${esc(pc)}</p><p class="small" style="margin:0">${band[2]}</p></div></div>
-  ${fixes.length?`<h3>Your top fixes</h3><ul class="list">${fixes.map(r=>`<li class="bad">⚠️ ${r.q}<small>${r.tip}</small></li>`).join('')}</ul>`:''}
-  ${rows.filter(r=>r.m===1).length?`<h3>Already sorted</h3><ul class="list">${rows.filter(r=>r.m===1).map(r=>`<li class="ok">✅ ${r.q}</li>`).join('')}</ul>`:''}
+  ${fixes.length?`<h3>Your top fixes</h3><ul class="list">${fixes.map(r=>`<li class="bad"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> ${r.q}<small>${r.tip}</small></li>`).join('')}</ul>`:''}
+  ${rows.filter(r=>r.m===1).length?`<h3>Already sorted</h3><ul class="list">${rows.filter(r=>r.m===1).map(r=>`<li class="ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> ${r.q}</li>`).join('')}</ul>`:''}
   <p class="small">This quick score is based on your answers only. The full audit checks your live Google listing, 3–5 local map searches and what ChatGPT, Gemini, Perplexity and Grok actually say about plumbers near ${esc(pc)}.</p>
-  <a class="btn" href="#audit" id="toAudit">Get my full free audit →</a>`;
+  <a class="btn" href="#audit" id="toAudit">Get my full free audit <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><p class="small">We’ve copied your business name and postcode into the audit form.</p>`;
   out.hidden=false;
   const af=document.getElementById('auditForm');af.business.value=biz;af.postcode.value=pc;af.dataset.selfScore=score;
   localStorage.setItem('findable_selfcheck',JSON.stringify({biz,pc,score,answers:Object.fromEntries(rows.map(r=>[r.id,r.v])),at:new Date().toISOString()}));
-  out.scrollIntoView({behavior:'smooth',block:'start'});
+  out.scrollIntoView({behavior:smooth(),block:'start'});
+  document.getElementById('toAudit').addEventListener('click',ev=>{ev.preventDefault();goAudit()});
 });
+function smooth(){return matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}
+function goAudit(){const af=document.getElementById('auditForm');document.getElementById('audit').scrollIntoView({behavior:smooth(),block:'start'});const n=af.querySelector('[name=name]');setTimeout(()=>n.focus({preventScroll:true}),400);history.replaceState(null,'','#audit')}
+// light scroll reveal (skipped entirely for reduced motion)
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.documentElement.classList.add('js');
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
 
 const AUDIT_ENDPOINT='https://formsubmit.co/ajax/39503e9df3f6e78db33e8f0d00a79949';
 document.getElementById('auditForm').addEventListener('submit',async e=>{
