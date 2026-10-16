@@ -7,10 +7,11 @@ Audience: plumbers in Finchley, Barnet and North London (N2, N3, N12, EN4, EN5, 
 ## What we offer
 - Free 2-minute self-check on this site (no login)
 - Free full audit (map searches + AI assistants)
-- Profile Fix-Up: £129 one-off
-- Findable Monthly: £59/month (first month free)
-- Findable Plus: £99/month (first month free)
-- Missed-Call Catcher add-on: +£39/month
+- Profile Fix-Up: £129 one-off — buy: https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00
+- Findable Monthly: £59/month (first month free) — buy: https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01
+- Findable Plus: £99/month (first month free) — buy: https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02
+- Missed-Call Catcher add-on: +£39/month — buy: https://buy.stripe.com/fZu14geu32296jm7JR1Jm03
+- The £129 one-off setup fee is paid alongside the monthly plan. A free audit is the recommended first step.
 
 ## How it works
 1. Free audit of Google profile, local map searches and AI answers
