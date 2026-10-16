@@ -23,7 +23,7 @@ fieldset{border:0;padding:0;margin:10px 0 18px}.q{border-top:1px solid #eee;padd
 .plan h3{margin:0}.price{font-size:2.2rem;font-weight:800;margin:.2em 0}.price span{font-size:1rem;font-weight:500;color:var(--muted)}.free{color:var(--brand);font-weight:700;margin:0}.plan ul{padding-left:1.1em;color:var(--muted)}
 .addon{margin-top:16px;background:var(--ink);color:#fff;border-radius:var(--r);padding:18px}.addon p{margin:.3em 0 0;opacity:.85}
 details{background:#fff;border-radius:10px;padding:14px;margin:8px 0}summary{font-weight:600;cursor:pointer}
-.tick{display:flex;gap:8px;font-weight:500}.thanks{background:var(--brand2);padding:14px;border-radius:10px;font-weight:600}
+.tick{display:flex;gap:10px;align-items:flex-start;font-weight:500;min-height:24px}.tick input{width:24px;height:24px;flex:0 0 24px;margin:0;accent-color:var(--brand)}.privacy a{display:inline-block;padding:3px 0}.thanks{background:var(--brand2);padding:14px;border-radius:10px;font-weight:600}
 footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px}
 @media(min-width:720px){.row{display:grid;grid-template-columns:2fr 1fr;gap:14px}.card-grid{grid-template-columns:repeat(3,1fr)}.plans{grid-template-columns:repeat(3,1fr)}.hero{padding-top:70px!important}}
 
