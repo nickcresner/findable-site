@@ -13,7 +13,12 @@
 <meta property="og:url" content="https://findable.london/">
 <meta property="og:title" content="Findable – get found on Google Maps & AI assistants">
 <meta property="og:description" content="Free findability check for North London plumbers. Fix your Google Business Profile and show up in ChatGPT, Gemini, Perplexity and Grok.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://findable.london/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Findable – get found on Google Maps and AI assistants. For North London plumbers.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://findable.london/og.png">
 <meta name="twitter:title" content="Findable – get found on Google Maps & AI assistants">
 <meta name="twitter:description" content="Free findability check for North London plumbers. Google Maps + AI assistants.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -28,14 +33,15 @@
   "description": "Google Business Profile and AI-assistant visibility for local plumbers in North London.",
   "areaServed": [
     {"@type": "AdministrativeArea", "name": "North London"},
+    "Finchley", "Barnet", "Muswell Hill", "Hendon", "Enfield", "Haringey",
     "N2", "N3", "N12", "EN4", "EN5", "NW7"
   ],
   "priceRange": "£59-£129",
   "knowsAbout": ["Google Business Profile", "local SEO", "AI findability", "plumber marketing"],
   "makesOffer": [
-    {"@type": "Offer", "name": "Profile Fix-Up", "url": "https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00", "price": "129", "priceCurrency": "GBP"},
-    {"@type": "Offer", "name": "Findable Monthly", "url": "https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01", "price": "59", "priceCurrency": "GBP"},
-    {"@type": "Offer", "name": "Findable Plus", "url": "https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02", "price": "99", "priceCurrency": "GBP"},
+    {"@type": "Offer", "name": "Profile Fix-Up", "url": "https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00", "price": "129", "priceCurrency": "GBP", "description": "One-off profile fix-up. Also the setup fee for the monthly plans."},
+    {"@type": "Offer", "name": "Findable Monthly", "url": "https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01", "price": "59", "priceCurrency": "GBP", "description": "£59/month after a £129 one-off setup (Profile Fix-Up). First month free. Rolling monthly, cancel any time."},
+    {"@type": "Offer", "name": "Findable Plus", "url": "https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02", "price": "99", "priceCurrency": "GBP", "description": "£99/month after a £129 one-off setup (Profile Fix-Up). First month free. Rolling monthly, cancel any time."},
     {"@type": "Offer", "name": "Missed-Call Catcher", "url": "https://buy.stripe.com/fZu14geu32296jm7JR1Jm03", "price": "39", "priceCurrency": "GBP"}
   ]
 }
@@ -45,6 +51,16 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does it cost to start a monthly plan?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Monthly or £99 a month for Findable Plus. Your first month is free. Rolling monthly, cancel any time."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you need my Google password?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. You add us as a Manager on your Google Business Profile and can remove us any time."}
+    },
     {
       "@type": "Question",
       "name": "Can you get me to #1 on Google or guarantee ChatGPT mentions me?",
@@ -70,25 +86,56 @@
 </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17v.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
 <header class="nav">
-  <a class="logo" href="#"><span class="pin">📍</span>Findable</a>
-  <a class="btn btn-sm" href="#check">Free check</a>
+  <div class="nav-in">
+    <a class="logo" href="#top"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Findable</a>
+    <nav aria-label="Main"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+    <a class="btn btn-sm" href="#check">Free check</a>
+  </div>
 </header>
 
-<main>
+<main id="top">
 <section class="hero">
-  <p class="eyebrow">For plumbers in Finchley, Barnet & North London</p>
-  <h1>When someone needs a plumber, <span class="hl">are you the one they find?</span></h1>
-  <p class="lead">More customers now ask Google Maps <em>and</em> AI assistants like ChatGPT “who's a good plumber near me?”. We sort your Google profile and your AI visibility so the phone rings for you, not the next name on the list.</p>
-  <a class="btn" href="#check">Take the free 2-minute check →</a>
-  <p class="small">No login, no sales call, no jargon.</p>
-  <div class="logos"><span>Google Maps</span><span>ChatGPT</span><span>Gemini</span><span>Perplexity</span><span>Grok</span></div>
+  <div class="hero-copy">
+    <p class="eyebrow">For plumbers in Finchley, Barnet &amp; North London</p>
+    <h1>When someone needs a plumber, <span class="hl">are you the one they find?</span></h1>
+    <p class="lead">More customers now ask Google Maps <em>and</em> AI assistants like ChatGPT “who's a good plumber near me?”. We sort your Google profile and your AI visibility so the phone rings for you, not the next name on the list.</p>
+    <a class="btn" href="#check">Take the free 2-minute check <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <p class="small">No login, no sales call, no jargon.</p>
+    <ul class="chips" aria-label="Where customers search"><li><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>Google Maps</li><li><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>ChatGPT</li><li><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Gemini</li><li><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Perplexity</li><li><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Grok</li></ul>
+  </div>
+  <figure class="phone-wrap" aria-label="Illustration: a phone showing a Google Maps result list and an AI assistant answer, both featuring a fictional plumber called Example Plumbing Co.">
+    <div class="phone" aria-hidden="true">
+      <div class="notch"></div>
+      <div class="scr">
+        <div class="srch"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>plumber near me</div>
+        <div class="mapbox"><svg viewBox="0 0 260 90" preserveAspectRatio="none"><rect width="260" height="90" fill="#e9f6f3"/><path d="M0 60 C60 40 120 80 260 30" stroke="#fff" stroke-width="9" fill="none"/><path d="M90 0 L120 90" stroke="#fff" stroke-width="6"/><circle cx="70" cy="48" r="5" fill="#9aa3b5"/><circle cx="190" cy="30" r="5" fill="#9aa3b5"/><path d="M135 52c0-8 12-8 12 0 0 6-6 12-6 12s-6-6-6-12z" fill="#0f7b6c"/><circle cx="141" cy="51" r="2.4" fill="#fff"/></svg></div>
+        <div class="res hit"><b>Example Plumbing Co.</b><span class="stars">★★★★★</span><span class="meta">Plumber · Open now · N3</span></div>
+        <div class="res"><b class="ghost w70"></b><span class="ghost w40"></span></div>
+        <div class="res"><b class="ghost w60"></b><span class="ghost w50"></span></div>
+        <div class="ai"><div class="aq">Who's a good plumber in Finchley?</div><div class="a"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg><p><mark>Example Plumbing Co.</mark> is well reviewed for leaks and boiler repairs in N3, with up-to-date hours…</p></div></div>
+      </div>
+    </div>
+    <figcaption class="small">Illustration only. “Example Plumbing Co.” is made up.</figcaption>
+  </figure>
 </section>
 
 <section class="card-grid">
-  <div class="card"><b>😩 On the tools all day?</b><p>Missed calls ring the next plumber. One lost job is £150–£200.</p></div>
-  <div class="card"><b>🕰 Profile half-done?</b><p>Old hours, no photos, wrong category – Google shows you less.</p></div>
-  <div class="card"><b>🤖 Invisible to AI?</b><p>ChatGPT and friends pull from your profile, reviews and website. Gaps mean you're skipped.</p></div>
+  <div class="card reveal"><svg class="ic lg" aria-hidden="true"><use href="#i-phone"/></svg><b>On the tools all day?</b><p>Missed calls ring the next plumber. One lost job is £150–£200.</p></div>
+  <div class="card reveal"><svg class="ic lg" aria-hidden="true"><use href="#i-clock"/></svg><b>Profile half-done?</b><p>Old hours, no photos, wrong category – Google shows you less.</p></div>
+  <div class="card reveal"><svg class="ic lg" aria-hidden="true"><use href="#i-spark"/></svg><b>Invisible to AI?</b><p>ChatGPT and friends pull from your profile, reviews and website. Gaps mean you're skipped.</p></div>
 </section>
 
 <section id="check" class="check">
@@ -106,7 +153,7 @@
   <div id="result" hidden></div>
 </section>
 
-<section class="how">
+<section id="how" class="how reveal">
   <h2>How it works</h2>
   <ol>
     <li><b>Free audit.</b> We check your Google profile, 3–5 local map searches and what ChatGPT, Gemini, Perplexity and Grok say. One page, plain English.</li>
@@ -119,17 +166,19 @@
 <section id="pricing" class="pricing">
   <h2>Simple prices. No contracts.</h2>
   <p class="small">Rolling monthly, cancel any time. First month of any monthly plan is free.</p>
-  <p class="small">The £129 Profile Fix-Up is a one-off setup fee, paid alongside your monthly plan. Not sure yet? <a href="#audit" class="inl">Get your free audit first</a>.</p>
+  <p class="small">Not sure yet? <a href="#audit" class="inl">Get your free audit first</a>.</p>
   <div class="plans">
-    <div class="plan"><h3>Profile Fix-Up</h3><p class="price">£129<span> one-off</span></p><ul><li>Hours, categories, services, description</li><li>10+ photos sorted</li><li>Review link & QR card</li><li>Replies to your review backlog</li><li>Name/address/phone made consistent</li></ul><a class="btn btn-sm btn-buy" href="https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00" rel="noopener">Get started</a></div>
-    <div class="plan feat"><span class="tag">Most popular</span><h3>Findable Monthly</h3><p class="price">£59<span>/month</span></p><p class="free">First month free</p><ul><li>5★ review replies posted for you</li><li>Other replies drafted for your OK</li><li>2 Google posts a month</li><li>Bank-holiday hours updated</li><li>Monthly map & AI recheck + report</li></ul><a class="btn btn-sm btn-buy" href="https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01" rel="noopener">Get started</a></div>
-    <div class="plan"><h3>Findable Plus</h3><p class="price">£99<span>/month</span></p><p class="free">First month free</p><ul><li>Everything in Monthly</li><li>Weekly posts</li><li>Competitor watch</li><li>Directory clean-up</li><li>Quarterly 15-min call</li></ul><a class="btn btn-sm btn-buy" href="https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02" rel="noopener">Get started</a></div>
+    <div class="plan"><h3>Profile Fix-Up</h3><p class="price">£129<span> one-off</span></p><ul><li>Hours, categories, services, description</li><li>10+ photos sorted</li><li>Review link & QR card</li><li>Replies to your review backlog</li><li>Name/address/phone made consistent</li></ul><a class="btn btn-block" href="https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00" rel="noopener" aria-label="Get started with Profile Fix-Up">Get started</a></div>
+    <div class="plan feat"><span class="tag">Best value</span><h3>Findable Monthly</h3><p class="price">£59<span>/month</span></p><p class="start">Start: £129 setup, then £59/mo (first month free)</p><ul><li>5★ review replies posted for you</li><li>Other replies drafted for your OK</li><li>2 Google posts a month</li><li>Bank-holiday hours updated</li><li>Monthly map & AI recheck + report</li></ul><a class="btn btn-block" href="https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01" rel="noopener" aria-label="Get started with Findable Monthly">Get started</a></div>
+    <div class="plan"><h3>Findable Plus</h3><p class="price">£99<span>/month</span></p><p class="start">Start: £129 setup, then £99/mo (first month free)</p><ul><li>Everything in Monthly</li><li>Weekly posts</li><li>Competitor watch</li><li>Directory clean-up</li><li>Quarterly 15-min call</li></ul><a class="btn btn-block" href="https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02" rel="noopener" aria-label="Get started with Findable Plus">Get started</a></div>
   </div>
-  <div class="addon"><b>📞 Missed-Call Catcher +£39/month</b><p>Can't answer? Callers get an instant text, we ask what the job is, where and when, and send you a tidy summary. Works with your existing number.</p><a class="btn btn-sm btn-buy" href="https://buy.stripe.com/fZu14geu32296jm7JR1Jm03" rel="noopener">Get started</a></div>
+  <div class="addon"><b><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Missed-Call Catcher +£39/month</b><p>Can't answer? Callers get an instant text, we ask what the job is, where and when, and send you a tidy summary. Works with your existing number.</p><a class="btn btn-block" href="https://buy.stripe.com/fZu14geu32296jm7JR1Jm03" rel="noopener" aria-label="Get started with Missed-Call Catcher">Get started</a></div>
 </section>
 
-<section class="faq">
-  <h2>Fair questions</h2>
+<section id="faq" class="faq">
+  <h2>FAQ: fair questions</h2>
+  <details><summary>What does it cost to start a monthly plan?</summary><p>Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Monthly or £99 a month for Findable Plus. Your first month is free. Rolling monthly, cancel any time.</p></details>
+  <details><summary>Do you need my Google password?</summary><p>No. You add us as a Manager on your Google Business Profile and can remove us any time.</p></details>
   <details><summary>Can you get me to #1 on Google or guarantee ChatGPT mentions me?</summary><p>No – and be wary of anyone who says they can. We improve the signals Google and AI assistants use, and show you the trend each month.</p></details>
   <details><summary>Do you write fake reviews?</summary><p>Never. Only real customers, no incentives. It's against Google's rules and UK law.</p></details>
   <details><summary>Do I need to be good with computers?</summary><p>No. You get a WhatsApp or text when something needs your thumbs-up. That's it.</p></details>
@@ -149,11 +198,17 @@
     <button class="btn" type="submit">Request my free audit</button>
   </form>
   <p id="auditThanks" class="thanks" role="status" hidden></p>
-  <p class="small privacy"><b>Privacy:</b> we collect only what you type here (name, business, postcode, email or mobile, and your self-check score if you did one). We use it only to send your audit and reply to you – never sold or shared for marketing. Submissions are delivered to us by email via FormSubmit. To see or delete your details, email <a href="mailto:hello@findable.london">hello@findable.london</a>.</p>
+  <p id="privacy" class="small privacy"><b>Privacy:</b> we collect only what you type here (name, business, postcode, email or mobile, and your self-check score if you did one). We use it only to send your audit and reply to you – never sold or shared for marketing. Submissions are delivered to us by email via FormSubmit. To see or delete your details, email <a href="mailto:hello@findable.london">hello@findable.london</a>.</p>
 </section>
 </main>
 
-<footer><p>© 2026 Findable · North London · Results vary; we never promise rankings. Google Maps is a trademark of Google LLC.</p></footer>
+<footer class="foot">
+  <div class="foot-in">
+    <div><a class="logo" href="#top"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Findable</a><p>Serving North London: Finchley, Barnet, Muswell Hill, Hendon, Enfield, Haringey</p></div>
+    <div class="foot-links"><a href="mailto:hello@findable.london"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>hello@findable.london</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#check">Free check</a><a href="#privacy">Privacy</a></div>
+  </div>
+  <p class="fine">© 2026 Findable · Results vary; we never promise rankings. Google Maps is a trademark of Google LLC. Other product names belong to their owners.</p>
+</footer>
 <script src="app.js"></script>
 </body>
 </html>
