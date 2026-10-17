@@ -32,18 +32,63 @@
   "email": "hello@findable.london",
   "description": "Google Business Profile and AI-assistant visibility for local plumbers in North London.",
   "areaServed": [
-    {"@type": "AdministrativeArea", "name": "North London"},
-    "Finchley", "Barnet", "Muswell Hill", "Hendon", "Enfield", "Haringey",
-    "N2", "N3", "N12", "EN4", "EN5", "NW7"
+    {
+      "@type": "AdministrativeArea",
+      "name": "North London"
+    },
+    "Finchley",
+    "Barnet",
+    "Muswell Hill",
+    "Hendon",
+    "Enfield",
+    "Haringey",
+    "N2",
+    "N3",
+    "N12",
+    "EN4",
+    "EN5",
+    "NW7"
   ],
   "priceRange": "£59-£129",
-  "founder": {"@type": "Person", "name": "Nick Cresner", "jobTitle": "Founder", "image": "https://findable.london/nick.webp", "email": "hello@findable.london"},
-  "slogan": "Get found on Google Maps and AI assistants. No contract, no lead fees.",
-  "knowsAbout": ["Google Business Profile", "local SEO", "AI findability", "plumber marketing"],
+  "founder": {
+    "@type": "Person",
+    "name": "Nick Cresner",
+    "jobTitle": "Founder",
+    "image": "https://findable.london/nick.webp",
+    "email": "hello@findable.london"
+  },
+  "slogan": "Get found on Google Maps and AI assistants. £129 one-off fix-up, 30-day money-back. No contract, no lead fees.",
+  "knowsAbout": [
+    "Google Business Profile",
+    "local SEO",
+    "AI findability",
+    "plumber marketing"
+  ],
   "makesOffer": [
-    {"@type": "Offer", "name": "Profile Fix-Up", "url": "https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00", "price": "129", "priceCurrency": "GBP", "description": "One-off profile fix-up. Also the setup fee for the monthly plans."},
-    {"@type": "Offer", "name": "Findable Essentials", "url": "https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01", "price": "59", "priceCurrency": "GBP", "description": "Visibility: £59/month after a £129 one-off setup (Profile Fix-Up). Google posts, review replies, monthly map and AI-assistant recheck. First month free. Rolling monthly, cancel any time."},
-    {"@type": "Offer", "name": "Findable Pro", "url": "https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02", "price": "99", "priceCurrency": "GBP", "description": "Visibility plus admin on autopilot: £99/month after a £129 one-off setup (Profile Fix-Up). Everything in Essentials plus missed-call text-back, appointment confirmations and reminders, and review requests after every job. First month free. Rolling monthly, cancel any time."}
+    {
+      "@type": "Offer",
+      "name": "Profile Fix-Up",
+      "url": "https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00",
+      "price": "129",
+      "priceCurrency": "GBP",
+      "description": "One-off Google Business Profile fix-up: hours, categories, services, photos, review link and QR card, review backlog replies, consistent name/address/phone. 30-day money-back guarantee: the £129 is refunded in full if requested by email to hello@findable.london within 30 days of payment, no questions asked."
+    },
+    {
+      "@type": "Offer",
+      "name": "Findable Essentials",
+      "url": "https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01",
+      "price": "59",
+      "priceCurrency": "GBP",
+      "description": "Visibility: first month free (30-day trial, nothing to pay today), then £59/month. Review replies, Google posts, hours and Q&A kept right, monthly map and AI-assistant recheck. Rolling monthly, cancel any time."
+    },
+    {
+      "@type": "Offer",
+      "name": "Findable Pro",
+      "url": "https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02",
+      "price": "99",
+      "priceCurrency": "GBP",
+      "description": "Visibility plus admin on autopilot: first month free (30-day trial, nothing to pay today), then £99/month. Everything in Essentials plus missed-call text-back, appointment confirmations and reminders, and review requests after every job. Rolling monthly, cancel any time."
+    }
   ]
 }
 </script>
@@ -57,7 +102,7 @@
       "name": "What does it cost to start a monthly plan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Essentials (visibility) or £99 a month for Findable Pro (visibility plus missed-call text-back, appointment reminders and review requests). Your first month is free. Rolling monthly, cancel any time."
+        "text": "Nothing today. Findable Essentials (visibility) and Findable Pro (visibility plus missed-call text-back, appointment reminders with reply YES or R to reschedule, and review requests) both start with your first month free (30 days), then £59 or £99 a month. Most people start with the £129 Profile Fix-Up, a one-off that sorts the profile first; the monthly plans keep it right. Rolling monthly, cancel any time."
       }
     },
     {
@@ -110,6 +155,14 @@
     },
     {
       "@type": "Question",
+      "name": "Is there a money-back guarantee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on the £129 Profile Fix-Up (setup) fee. If you're not happy, email hello@findable.london within 30 days of paying and we refund the £129 in full, no questions asked. Just tell us by email; you don't need to give a reason."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is there a contract? How do I cancel?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -121,7 +174,7 @@
       "name": "If the first month is free, when do I pay?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You pay the £129 one-off setup (the Profile Fix-Up) at checkout. Your first monthly payment, £59 for Essentials or £99 for Pro, is taken 30 days later. Cancel before then and the setup is all you pay."
+        "text": "Monthly plans take nothing at checkout. Your first payment, £59 for Essentials or £99 for Pro, is taken 30 days after you start; cancel before then and you pay nothing. The Profile Fix-Up is a separate one-off £129, paid at checkout, with a 30-day money-back guarantee."
       }
     },
     {
@@ -187,8 +240,9 @@
     <p class="eyebrow">For <span data-t="plumbers">plumbers</span> in Finchley, Barnet &amp; North London</p>
     <h1>When someone needs <span data-t="a plumber">a plumber</span>, <span class="hl">are you the one they find?</span></h1>
     <p class="lead">More customers now ask Google Maps <em>and</em> AI assistants like ChatGPT “who's a good <span data-t="plumber">plumber</span> near me?”. We sort your Google profile and your AI visibility so the phone rings for you, not the next name on the list.</p>
-    <a class="btn" href="#check">Take the free 2-minute check <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    <p class="small">No login, no sales call, no jargon. Rather we look for you? <a href="#audit" class="inl">Get a free audit done for you</a>.</p>
+    <p class="offer" id="heroOffer"><b>Profile Fix-Up, £129 one-off.</b> We sort your hours, categories, services, photos, review link and review backlog, and you approve every change. 30-day money-back guarantee.</p>
+    <a class="btn" data-track="hero-fixup" href="#plan-fixup">Get my profile fixed: £129 <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <p class="small">Not sure yet? <a href="#check" class="inl">Take the free 2-minute check</a> or <a href="#audit" class="inl">get a free audit done for you</a>. Monthly plans to keep it right are optional.</p>
     <ul class="trust" aria-label="Our terms in brief"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>No 12-month contract</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>No lead fees or credits</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Your Google profile and reviews stay yours</li></ul>
     <ul class="chips" aria-label="Where customers search"><li><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>Google Maps</li><li><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>ChatGPT</li><li><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Gemini</li><li><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Perplexity</li><li><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Grok</li></ul>
   </div>
@@ -257,12 +311,12 @@
 <section id="pricing" class="pricing">
   <h2>Simple prices. No contracts.</h2>
   <div class="founding" id="pilot"><b>Founding pilot:</b> the first 5 North London businesses get the £129 Profile Fix-Up free plus their first month on Findable Pro free, so you see missed-call text-back and appointment reminders working, in exchange for a quick 5-minute online feedback form after 2 weeks (and permission to share their results as a case study). No calls needed.<a class="btn btn-block pilot-cta" data-track="pilot-cta" href="?offer=pilot#audit" aria-label="Apply for the founding pilot via the free audit form">Apply for the founding pilot</a></div>
-  <p class="paynow" id="paynow"><b>Monthly plans, what you pay today:</b> the £129 setup only. Your first monthly payment is 30 days later, and if you cancel before then the setup is all you pay. Rolling monthly, no minimum term, cancel any time.</p>
+  <p class="paynow" id="paynow"><b>What you pay today:</b> Profile Fix-Up, £129 one-off, with a 30-day money-back guarantee. Monthly plans, £0: your first month is free (30 days), then £59 or £99 a month, and if you cancel before day 30 you pay nothing. Rolling monthly, no minimum term.</p>
   <p class="small">Not sure yet? <a href="#audit" class="inl">Get your free audit first</a>.</p>
   <div class="plans">
-    <div class="plan"><h3>Profile Fix-Up</h3><p class="price">£129<span> one-off</span></p><ul><li>Hours, categories, services, description</li><li>10+ photos sorted</li><li>Review link & QR card</li><li>Replies to your review backlog</li><li>Name/address/phone made consistent</li></ul><a class="btn btn-block" data-track="stripe-fixup" href="https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00" rel="noopener" aria-label="Get started with Profile Fix-Up">Get started</a></div>
-    <div class="plan" id="plan-essentials"><h3>Findable Essentials</h3><p class="sub">Stay findable</p><p class="price">£59<span>/month</span></p><p class="start">Start: £129 setup, then £59/mo (first month free)</p><ul><li>5★ review replies posted for you</li><li>Other replies drafted for your OK</li><li>2 Google posts a month</li><li>Hours, Q&amp;A and bank-holiday hours kept right</li><li>Review link &amp; QR card</li><li>Monthly map &amp; AI-assistant recheck + report</li></ul><a class="btn btn-block" data-track="stripe-essentials" href="https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01" rel="noopener" aria-label="Get started with Findable Essentials">Get started</a></div>
-    <div class="plan feat" id="plan-pro"><span class="tag">Best value</span><h3>Findable Pro</h3><p class="sub">Findable + admin on autopilot</p><p class="price">£99<span>/month</span></p><p class="start">Start: £129 setup, then £99/mo (first month free)</p><ul><li>Everything in Essentials, with weekly posts</li><li><b>Missed-call text-back:</b> callers get an instant text and a call-back link</li><li><b>Appointment confirmations &amp; reminders:</b> customers reply YES, or R to reschedule</li><li><b>Review requests after every job</b> (real customers, no incentives)</li><li>Directory clean-up &amp; competitor watch</li><li>Report shows jobs recovered + quarterly 15-min call</li></ul><a class="btn btn-block" data-track="stripe-pro" href="https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02" rel="noopener" aria-label="Get started with Findable Pro">Get started</a></div>
+    <div class="plan feat" id="plan-fixup"><span class="tag">Start here</span><h3>Profile Fix-Up</h3><p class="price">£129<span> one-off</span></p><p class="start">Pay once. 30-day money-back guarantee.</p><ul><li>Hours, categories, services, description</li><li>10+ photos sorted</li><li>Review link & QR card</li><li>Replies to your review backlog</li><li>Name/address/phone made consistent</li><li>No subscription needed</li></ul><a class="btn btn-block" data-track="stripe-fixup" href="https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00" rel="noopener" aria-label="Get started with Profile Fix-Up">Get started</a></div>
+    <div class="plan" id="plan-essentials"><h3>Findable Essentials</h3><p class="sub">Stay findable</p><p class="price">£59<span>/month</span></p><p class="start">£0 today: 30 days free, then £59/mo</p><ul><li>5★ review replies posted for you</li><li>Other replies drafted for your OK</li><li>2 Google posts a month</li><li>Hours, Q&amp;A and bank-holiday hours kept right</li><li>Review link &amp; QR card</li><li>Monthly map &amp; AI-assistant recheck + report</li></ul><a class="btn btn-block" data-track="stripe-essentials" href="https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01" rel="noopener" aria-label="Get started with Findable Essentials">Get started</a></div>
+    <div class="plan" id="plan-pro"><span class="tag">Most complete</span><h3>Findable Pro</h3><p class="sub">Findable + admin on autopilot</p><p class="price">£99<span>/month</span></p><p class="start">£0 today: 30 days free, then £99/mo</p><ul><li>Everything in Essentials, with weekly posts</li><li><b>Missed-call text-back:</b> callers get an instant text and a call-back link</li><li><b>Appointment confirmations &amp; reminders:</b> customers reply YES, or R to reschedule</li><li><b>Review requests after every job</b> (real customers, no incentives)</li><li>Directory clean-up &amp; competitor watch</li><li>Report shows jobs recovered + quarterly 15-min call</li></ul><a class="btn btn-block" data-track="stripe-pro" href="https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02" rel="noopener" aria-label="Get started with Findable Pro">Get started</a></div>
   </div>
 </section>
 
@@ -273,15 +327,16 @@
 
 <section id="faq" class="faq">
   <h2>FAQ: fair questions</h2>
-  <details><summary>What does it cost to start a monthly plan?</summary><p>Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Essentials (visibility) or £99 a month for Findable Pro (visibility plus missed-call text-back, appointment reminders and review requests). Your first month is free. Rolling monthly, cancel any time.</p></details>
+  <details><summary>What does it cost to start a monthly plan?</summary><p>Nothing today. Findable Essentials (visibility) and Findable Pro (visibility plus missed-call text-back, appointment reminders with reply YES or R to reschedule, and review requests) both start with your first month free (30 days), then £59 or £99 a month. Most people start with the £129 Profile Fix-Up, a one-off that sorts the profile first; the monthly plans keep it right. Rolling monthly, cancel any time.</p></details>
   <details><summary>What does Findable Pro do that Essentials doesn't?</summary><p>Pro adds the admin: if you miss a call, the caller gets a text straight away with a link to book a call-back. Customers get a booking confirmation plus reminders the day before and on the morning, and can reply YES to confirm or R to reschedule. After every job, each customer gets a thank-you and your Google review link (no incentives, no cherry-picking).</p></details>
   <details><summary>Do you need my Google password?</summary><p>No. You add us as a Manager on your Google Business Profile and can remove us any time.</p></details>
   <details><summary>Can you get me to #1 on Google or guarantee ChatGPT mentions me?</summary><p>No – and be wary of anyone who says they can. We improve the signals Google and AI assistants use, and show you the trend each month.</p></details>
   <details><summary>Do you write fake reviews?</summary><p>Never. Only real customers, no incentives. It's against Google's rules and UK law.</p></details>
   <details><summary>Do I need to be good with computers?</summary><p>No. You get a WhatsApp or text when something needs your thumbs-up. That's it.</p></details>
   <details><summary>Is this like Checkatrade, Bark or MyBuilder?</summary><p>No. We don't sell leads, so there are no lead fees, credits or shortlist charges, and nobody else is sent your customer. We improve your own free Google Business Profile so people who search for a plumber near them find you and call you directly. Plenty of trades keep a directory listing as well, and that's fine.</p></details>
+  <details><summary>Is there a money-back guarantee?</summary><p>Yes, on the £129 Profile Fix-Up (setup) fee. If you're not happy, email hello@findable.london within 30 days of paying and we refund the £129 in full, no questions asked. Just tell us by email; you don't need to give a reason.</p></details>
   <details><summary>Is there a contract? How do I cancel?</summary><p>No contract and no minimum term. The monthly plans roll month to month. To cancel, email hello@findable.london and we stop the subscription and remove our Manager access to your profile.</p></details>
-  <details><summary>If the first month is free, when do I pay?</summary><p>You pay the £129 one-off setup (the Profile Fix-Up) at checkout. Your first monthly payment, £59 for Essentials or £99 for Pro, is taken 30 days later. Cancel before then and the setup is all you pay.</p></details>
+  <details><summary>If the first month is free, when do I pay?</summary><p>Monthly plans take nothing at checkout. Your first payment, £59 for Essentials or £99 for Pro, is taken 30 days after you start; cancel before then and you pay nothing. The Profile Fix-Up is a separate one-off £129, paid at checkout, with a 30-day money-back guarantee.</p></details>
   <details><summary>What happens to my Google profile if I stop?</summary><p>It stays yours. Your profile, photos, posts and reviews belong to your business. We were only ever a Manager, and we remove ourselves when you leave.</p></details>
   <details><summary>What actually helps a plumber show up on Google Maps?</summary><p>Google says local results are mainly based on relevance, distance and prominence. Distance is out of anyone's hands, so we work on the rest: the right main category, your services and areas written out, correct hours, real photos, and a steady flow of genuine reviews that you reply to.</p></details>
   <details><summary>Do I need a website?</summary><p>No. Most of the work happens on your Google profile. If you do have a website, we make sure its name, address and phone match your profile, because Google and AI assistants cross-check them.</p></details>

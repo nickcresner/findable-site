@@ -79,3 +79,4 @@ textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1.5px solid
 .cmp{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.92rem}.cmp th,.cmp td{padding:10px 10px;text-align:left;vertical-align:top;border-top:1px solid #eee;overflow-wrap:anywhere}.cmp thead th{border-top:0;background:#f6f7f9;font-size:.85rem}.cmp thead th:last-child{background:var(--brand2);color:var(--ink)}.cmp td:last-child{background:#f4fbf9;font-weight:600}.cmp tbody th{color:var(--ink);width:28%}.cmp td{color:var(--muted)}.cmp td:last-child{color:var(--ink)}
 @media(max-width:719px){.cmp{font-size:.82rem}.cmp th,.cmp td{padding:8px 6px}}
 .paynow{background:#fff;border:1px solid #e6e3dc;border-radius:10px;padding:10px 14px;font-size:.95rem;margin:8px 0}
+.offer{background:#fff;border:1.5px solid var(--brand);border-radius:12px;padding:10px 14px;margin:14px 0 12px;font-size:1rem}
