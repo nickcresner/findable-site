@@ -166,7 +166,7 @@
 
 <section id="pricing" class="pricing">
   <h2>Simple prices. No contracts.</h2>
-  <div class="founding"><b>Founding customer offer:</b> First month free on Findable Monthly or Plus for our first 10 North London customers. When those 10 places are gone, the offer ends.</div>
+  <div class="founding" id="pilot"><b>Founding pilot:</b> the first 5 North London businesses get the £129 Profile Fix-Up free plus their first month of Findable Monthly free, in exchange for a 15-minute feedback chat and permission to feature their results as a case study.<a class="btn btn-block pilot-cta" data-track="pilot-cta" href="?offer=pilot#audit" aria-label="Apply for the founding pilot via the free audit form">Apply for the founding pilot</a></div>
   <p class="small">Rolling monthly, cancel any time.</p>
   <p class="small">Not sure yet? <a href="#audit" class="inl">Get your free audit first</a>.</p>
   <div class="plans">
@@ -194,6 +194,7 @@
 
 <section id="audit" class="audit">
   <h2>Get your free audit</h2>
+  <p id="pilotNote" class="thanks" hidden>You're applying for the founding pilot: Profile Fix-Up and first month of Findable Monthly free, in exchange for a 15-minute feedback chat and permission to feature your results as a case study. Nothing to pay.</p>
   <p id="snapNote" class="thanks" hidden>Got a Findable snapshot from Nick? Fill this in and you'll get the full version, including what the AI assistants say about you.</p>
   <p>Nick runs the full check – your live Google listing, local map searches and all four AI assistants – and emails you a one-page report within 2 working days. Free, no obligation.</p>
   <form id="auditForm">
@@ -201,6 +202,7 @@
     <label>Business name<input name="business" required></label>
     <label>Postcode<input name="postcode" required></label>
     <label>Email or mobile<input name="contact" required></label>
+    <input type="hidden" name="offer" value="">
     <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <label class="tick"><input type="checkbox" name="consent" required> I'm happy for Findable to contact me about this audit only.</label>
     <button class="btn" type="submit">Request my free audit</button>

@@ -43,7 +43,7 @@ document.getElementById('checkForm').addEventListener('submit',e=>{
   document.getElementById('toAudit').addEventListener('click',ev=>{ev.preventDefault();goAudit()});
 });
 function smooth(){return matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}
-function goAudit(){const af=document.getElementById('auditForm');document.getElementById('audit').scrollIntoView({behavior:smooth(),block:'start'});const n=af.querySelector('[name=name]');setTimeout(()=>n.focus({preventScroll:true}),400);history.replaceState(null,'','#audit')}
+function goAudit(){const af=document.getElementById('auditForm');document.getElementById('audit').scrollIntoView({behavior:smooth(),block:'start'});const n=af.querySelector('[name=name]');setTimeout(()=>n.focus({preventScroll:true}),400);history.replaceState(null,'',location.pathname+location.search+'#audit')}
 // light scroll reveal (skipped entirely for reduced motion)
 if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
   document.documentElement.classList.add('js');
@@ -57,7 +57,7 @@ document.getElementById('auditForm').addEventListener('submit',async e=>{
   const req=Object.fromEntries(new FormData(f));
   if(req._honey)return; // bot
   delete req.consent;req.consent='yes';Object.assign(req,UTM);req.selfScore=f.dataset.selfScore||'not taken';
-  req._subject='New Findable audit request';req._template='table';req._captcha='false';
+  req.offer=req.offer||'standard';req._subject=req.offer==='pilot'?'New Findable FOUNDING PILOT request':'New Findable audit request';req._template='table';req._captcha='false';
   const btn=f.querySelector('button[type=submit]'),t=document.getElementById('auditThanks');
   btn.disabled=true;btn.textContent='Sending…';
   try{
@@ -67,7 +67,7 @@ document.getElementById('auditForm').addEventListener('submit',async e=>{
     f.hidden=true;t.hidden=false;track('audit-submit');
     t.textContent=`Thanks ${req.name.split(' ')[0]} – we've got your request. We'll reply within 2 working days.`;
   }catch(err){
-    btn.disabled=false;btn.textContent='Request my free audit';t.hidden=false;
+    btn.disabled=false;btn.textContent=f.offer.value==='pilot'?'Apply for the founding pilot':'Request my free audit';t.hidden=false;
     t.textContent="Sorry, that didn't send. Please try again, or email hello@findable.london.";
   }
 });
@@ -84,3 +84,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return
 const REF=[UTM.utm_campaign,UTM.utm_content].filter(Boolean).join('__').replace(/[^A-Za-z0-9_-]/g,'_').slice(0,200);
 if(REF)document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('client_reference_id',REF);a.href=u.toString()});
 if(UTM.utm_source==='audit_report')document.getElementById('snapNote').hidden=false;
+// Founding pilot: ?offer=pilot (or the pilot button) flags the audit request; setup is free, so no Stripe.
+function setPilot(){const af=document.getElementById('auditForm');af.offer.value='pilot';document.getElementById('pilotNote').hidden=false;af.querySelector('button[type=submit]').textContent='Apply for the founding pilot'}
+if(new URLSearchParams(location.search).get('offer')==='pilot')setPilot();
+document.querySelector('.pilot-cta').addEventListener('click',e=>{e.preventDefault();setPilot();const q=new URLSearchParams(location.search);q.set('offer','pilot');history.replaceState(null,'','?'+q.toString()+'#audit');goAudit()});
