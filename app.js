@@ -1,4 +1,7 @@
 // Findable self-check: all client-side, nothing is sent anywhere.
+// Outreach variant from ?utm_* (kept for this tab only, in sessionStorage – no cookies).
+const UTM=(()=>{const q=new URLSearchParams(location.search),o={};['utm_source','utm_medium','utm_campaign','utm_content'].forEach(k=>{const v=q.get(k);if(v)o[k]=v.slice(0,80)});
+  try{if(Object.keys(o).length){sessionStorage.setItem('findable_utm',JSON.stringify(o));return o}return JSON.parse(sessionStorage.getItem('findable_utm')||'{}')}catch(e){return o}})();
 const QUESTIONS=[
  {id:'claimed',q:'Have you claimed (verified) your Google Business Profile?',w:15,tip:'Claim and verify your profile at business.google.com – nothing else works without it.'},
  {id:'category',q:'Is your main category set to “Plumber”?',w:10,tip:'Set “Plumber” as the primary category; add extras like “Emergency plumber” or “Boiler repair service” only if you do them.'},
@@ -33,7 +36,7 @@ document.getElementById('checkForm').addEventListener('submit',e=>{
   ${rows.filter(r=>r.m===1).length?`<h3>Already sorted</h3><ul class="list">${rows.filter(r=>r.m===1).map(r=>`<li class="ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> ${r.q}</li>`).join('')}</ul>`:''}
   <p class="small">This quick score is based on your answers only. The full audit checks your live Google listing, 3–5 local map searches and what ChatGPT, Gemini, Perplexity and Grok actually say about plumbers near ${esc(pc)}.</p>
   <a class="btn" href="#audit" id="toAudit">Get my full free audit <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><p class="small">We’ve copied your business name and postcode into the audit form.</p>`;
-  out.hidden=false;
+  out.hidden=false;track('selfcheck-'+(score>=80?'high':score>=50?'mid':'low'));
   const af=document.getElementById('auditForm');af.business.value=biz;af.postcode.value=pc;af.dataset.selfScore=score;
   localStorage.setItem('findable_selfcheck',JSON.stringify({biz,pc,score,answers:Object.fromEntries(rows.map(r=>[r.id,r.v])),at:new Date().toISOString()}));
   out.scrollIntoView({behavior:smooth(),block:'start'});
@@ -53,7 +56,7 @@ document.getElementById('auditForm').addEventListener('submit',async e=>{
   e.preventDefault();const f=e.target;if(!f.reportValidity())return;
   const req=Object.fromEntries(new FormData(f));
   if(req._honey)return; // bot
-  delete req.consent;req.consent='yes';req.selfScore=f.dataset.selfScore||'not taken';
+  delete req.consent;req.consent='yes';Object.assign(req,UTM);req.selfScore=f.dataset.selfScore||'not taken';
   req._subject='New Findable audit request';req._template='table';req._captcha='false';
   const btn=f.querySelector('button[type=submit]'),t=document.getElementById('auditThanks');
   btn.disabled=true;btn.textContent='Sending…';
@@ -61,10 +64,23 @@ document.getElementById('auditForm').addEventListener('submit',async e=>{
     const r=await fetch(AUDIT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(req)});
     const d=await r.json().catch(()=>({}));
     if(!r.ok||String(d.success)!=='true')throw new Error(d.message||r.status);
-    f.hidden=true;t.hidden=false;
+    f.hidden=true;t.hidden=false;track('audit-submit');
     t.textContent=`Thanks ${req.name.split(' ')[0]} – we've got your request. We'll reply within 2 working days.`;
   }catch(err){
     btn.disabled=false;btn.textContent='Request my free audit';t.hidden=false;
     t.textContent="Sorry, that didn't send. Please try again, or email hello@findable.london.";
   }
 });
+
+// ---- Measurement: cookie-free, no personal data, inert until GC_CODE is set ----
+// After signing up at goatcounter.com (free), set GC_CODE to the site code, e.g. 'findable' -> findable.goatcounter.com
+const GC_CODE='';
+function track(name){const ev={path:name,title:[UTM.utm_campaign,UTM.utm_content].filter(Boolean).join('/')||'direct',event:true};
+  if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count(ev);else(window._gcq=window._gcq||[]).push(ev)}
+if(GC_CODE){const s=document.createElement('script');s.async=true;s.src='https://gc.zgo.at/count.js';s.dataset.goatcounter=`https://${GC_CODE}.goatcounter.com/count`;
+  s.onload=()=>{(window._gcq||[]).forEach(e=>window.goatcounter.count(e));window._gcq=[]};document.head.appendChild(s)}
+document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;if(a.dataset.track)track(a.dataset.track);else if(a.href.startsWith('mailto:'))track('email-click')});
+// Attribution: carry the outreach variant through to Stripe (client_reference_id) and the audit form email.
+const REF=[UTM.utm_campaign,UTM.utm_content].filter(Boolean).join('__').replace(/[^A-Za-z0-9_-]/g,'_').slice(0,200);
+if(REF)document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('client_reference_id',REF);a.href=u.toString()});
+if(UTM.utm_source==='audit_report')document.getElementById('snapNote').hidden=false;

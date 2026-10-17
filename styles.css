@@ -67,3 +67,4 @@ input,button,select,textarea{font:inherit}
 .inl,.privacy a{color:var(--brand);font-weight:600}
 
 .founder-in{display:flex;gap:16px;align-items:center;background:#fff;border-radius:var(--r);padding:18px;border:1px solid #e6e3dc}.founder-in img{width:96px;height:96px;border-radius:50%;flex:none;object-fit:cover}.founder-in h3{margin:0 0 4px;color:var(--ink)}.founder-in p{margin:0}
+.founding{background:#fff4e0;border:1.5px solid var(--acc);border-radius:10px;padding:12px 16px;margin:10px 0 14px}
