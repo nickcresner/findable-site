@@ -69,3 +69,7 @@ input,button,select,textarea{font:inherit}
 .founder-in{display:flex;gap:16px;align-items:center;background:#fff;border-radius:var(--r);padding:18px;border:1px solid #e6e3dc}.founder-in img{width:96px;height:96px;border-radius:50%;flex:none;object-fit:cover}.founder-in h3{margin:0 0 4px;color:var(--ink)}.founder-in p{margin:0}
 .founding{background:#fff4e0;border:1.5px solid var(--acc);border-radius:10px;padding:12px 16px;margin:10px 0 14px}
 .founding .pilot-cta{margin-top:10px}@media(min-width:720px){.founding .pilot-cta{width:auto}}
+/* feedback page */
+.fb fieldset{border:0;margin:0;padding:14px 0}.fb legend{font-weight:700;padding:0;margin-bottom:8px}.fb .opts{margin-bottom:6px}
+textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1.5px solid #d6d9de;border-radius:10px;font-size:1rem;resize:vertical}textarea:focus{outline:2px solid var(--brand);border-color:var(--brand)}
+.foot .fine a{color:#fff;display:inline-block;min-height:24px;line-height:24px}
