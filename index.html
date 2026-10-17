@@ -41,9 +41,8 @@
   "knowsAbout": ["Google Business Profile", "local SEO", "AI findability", "plumber marketing"],
   "makesOffer": [
     {"@type": "Offer", "name": "Profile Fix-Up", "url": "https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00", "price": "129", "priceCurrency": "GBP", "description": "One-off profile fix-up. Also the setup fee for the monthly plans."},
-    {"@type": "Offer", "name": "Findable Monthly", "url": "https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01", "price": "59", "priceCurrency": "GBP", "description": "£59/month after a £129 one-off setup (Profile Fix-Up). First month free. Rolling monthly, cancel any time."},
-    {"@type": "Offer", "name": "Findable Plus", "url": "https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02", "price": "99", "priceCurrency": "GBP", "description": "£99/month after a £129 one-off setup (Profile Fix-Up). First month free. Rolling monthly, cancel any time."},
-    {"@type": "Offer", "name": "Missed-Call Catcher", "url": "https://buy.stripe.com/fZu14geu32296jm7JR1Jm03", "price": "39", "priceCurrency": "GBP"}
+    {"@type": "Offer", "name": "Findable Essentials", "url": "https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01", "price": "59", "priceCurrency": "GBP", "description": "Visibility: £59/month after a £129 one-off setup (Profile Fix-Up). Google posts, review replies, monthly map and AI-assistant recheck. First month free. Rolling monthly, cancel any time."},
+    {"@type": "Offer", "name": "Findable Pro", "url": "https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02", "price": "99", "priceCurrency": "GBP", "description": "Visibility plus admin on autopilot: £99/month after a £129 one-off setup (Profile Fix-Up). Everything in Essentials plus missed-call text-back, appointment confirmations and reminders, and review requests after every job. First month free. Rolling monthly, cancel any time."}
   ]
 }
 </script>
@@ -55,7 +54,12 @@
     {
       "@type": "Question",
       "name": "What does it cost to start a monthly plan?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Monthly or £99 a month for Findable Plus. Your first month is free. Rolling monthly, cancel any time."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Essentials (visibility) or £99 a month for Findable Pro (visibility plus missed-call text-back, appointment reminders and review requests). Your first month is free. Rolling monthly, cancel any time."}
+    },
+    {
+      "@type": "Question",
+      "name": "What does Findable Pro do that Essentials doesn't?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Pro adds the admin: if you miss a call, the caller gets a text straight away with a link to book a call-back. Customers get a booking confirmation plus reminders the day before and on the morning, and can reply YES to confirm or R to reschedule. After every job, each customer gets a thank-you and your Google review link (no incentives, no cherry-picking)."}
     },
     {
       "@type": "Question",
@@ -159,22 +163,21 @@
   <ol>
     <li><b>Free audit.</b> We check your Google profile, 3–5 local map searches and what ChatGPT, Gemini, Perplexity and Grok say. One page, plain English.</li>
     <li><b>Fix-up.</b> We tidy your profile – hours, services, photos, review replies – and you approve every change.</li>
-    <li><b>Stay findable.</b> Monthly posts, review replies and a recheck, with a short before-and-after report.</li>
+    <li><b>Stay findable.</b> Monthly posts, review replies and a recheck, with a short before-and-after report. On Pro we also catch missed calls, send appointment reminders and ask every customer for a review.</li>
   </ol>
   <p class="small">We never ask for your Google password – you add us as a Manager and can remove us any time.</p>
 </section>
 
 <section id="pricing" class="pricing">
   <h2>Simple prices. No contracts.</h2>
-  <div class="founding" id="pilot"><b>Founding pilot:</b> the first 5 North London businesses get the £129 Profile Fix-Up free plus their first month of Findable Monthly free, in exchange for a quick 5-minute online feedback form after 2 weeks (and permission to share their results as a case study). No calls needed.<a class="btn btn-block pilot-cta" data-track="pilot-cta" href="?offer=pilot#audit" aria-label="Apply for the founding pilot via the free audit form">Apply for the founding pilot</a></div>
+  <div class="founding" id="pilot"><b>Founding pilot:</b> the first 5 North London businesses get the £129 Profile Fix-Up free plus their first month on Findable Pro free, so you see missed-call text-back and appointment reminders working, in exchange for a quick 5-minute online feedback form after 2 weeks (and permission to share their results as a case study). No calls needed.<a class="btn btn-block pilot-cta" data-track="pilot-cta" href="?offer=pilot#audit" aria-label="Apply for the founding pilot via the free audit form">Apply for the founding pilot</a></div>
   <p class="small">Rolling monthly, cancel any time.</p>
   <p class="small">Not sure yet? <a href="#audit" class="inl">Get your free audit first</a>.</p>
   <div class="plans">
     <div class="plan"><h3>Profile Fix-Up</h3><p class="price">£129<span> one-off</span></p><ul><li>Hours, categories, services, description</li><li>10+ photos sorted</li><li>Review link & QR card</li><li>Replies to your review backlog</li><li>Name/address/phone made consistent</li></ul><a class="btn btn-block" data-track="stripe-fixup" href="https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00" rel="noopener" aria-label="Get started with Profile Fix-Up">Get started</a></div>
-    <div class="plan feat"><span class="tag">Best value</span><h3>Findable Monthly</h3><p class="price">£59<span>/month</span></p><p class="start">Start: £129 setup, then £59/mo (first month free)</p><ul><li>5★ review replies posted for you</li><li>Other replies drafted for your OK</li><li>2 Google posts a month</li><li>Bank-holiday hours updated</li><li>Monthly map & AI recheck + report</li></ul><a class="btn btn-block" data-track="stripe-monthly" href="https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01" rel="noopener" aria-label="Get started with Findable Monthly">Get started</a></div>
-    <div class="plan"><h3>Findable Plus</h3><p class="price">£99<span>/month</span></p><p class="start">Start: £129 setup, then £99/mo (first month free)</p><ul><li>Everything in Monthly</li><li>Weekly posts</li><li>Competitor watch</li><li>Directory clean-up</li><li>Quarterly 15-min call</li></ul><a class="btn btn-block" data-track="stripe-plus" href="https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02" rel="noopener" aria-label="Get started with Findable Plus">Get started</a></div>
+    <div class="plan" id="plan-essentials"><h3>Findable Essentials</h3><p class="sub">Stay findable</p><p class="price">£59<span>/month</span></p><p class="start">Start: £129 setup, then £59/mo (first month free)</p><ul><li>5★ review replies posted for you</li><li>Other replies drafted for your OK</li><li>2 Google posts a month</li><li>Hours, Q&amp;A and bank-holiday hours kept right</li><li>Review link &amp; QR card</li><li>Monthly map &amp; AI-assistant recheck + report</li></ul><a class="btn btn-block" data-track="stripe-essentials" href="https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01" rel="noopener" aria-label="Get started with Findable Essentials">Get started</a></div>
+    <div class="plan feat" id="plan-pro"><span class="tag">Best value</span><h3>Findable Pro</h3><p class="sub">Findable + admin on autopilot</p><p class="price">£99<span>/month</span></p><p class="start">Start: £129 setup, then £99/mo (first month free)</p><ul><li>Everything in Essentials, with weekly posts</li><li><b>Missed-call text-back:</b> callers get an instant text and a call-back link</li><li><b>Appointment confirmations &amp; reminders:</b> customers reply YES, or R to reschedule</li><li><b>Review requests after every job</b> (real customers, no incentives)</li><li>Directory clean-up &amp; competitor watch</li><li>Report shows jobs recovered + quarterly 15-min call</li></ul><a class="btn btn-block" data-track="stripe-pro" href="https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02" rel="noopener" aria-label="Get started with Findable Pro">Get started</a></div>
   </div>
-  <div class="addon"><b><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Missed-Call Catcher +£39/month</b><p>Can't answer? Callers get an instant text, we ask what the job is, where and when, and send you a tidy summary. Works with your existing number.</p><a class="btn btn-block" data-track="stripe-missedcall" href="https://buy.stripe.com/fZu14geu32296jm7JR1Jm03" rel="noopener" aria-label="Get started with Missed-Call Catcher">Get started</a></div>
 </section>
 
 <section id="founder" class="founder">
@@ -184,7 +187,8 @@
 
 <section id="faq" class="faq">
   <h2>FAQ: fair questions</h2>
-  <details><summary>What does it cost to start a monthly plan?</summary><p>Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Monthly or £99 a month for Findable Plus. Your first month is free. Rolling monthly, cancel any time.</p></details>
+  <details><summary>What does it cost to start a monthly plan?</summary><p>Start with the £129 Profile Fix-Up as a one-off setup, then £59 a month for Findable Essentials (visibility) or £99 a month for Findable Pro (visibility plus missed-call text-back, appointment reminders and review requests). Your first month is free. Rolling monthly, cancel any time.</p></details>
+  <details><summary>What does Findable Pro do that Essentials doesn't?</summary><p>Pro adds the admin: if you miss a call, the caller gets a text straight away with a link to book a call-back. Customers get a booking confirmation plus reminders the day before and on the morning, and can reply YES to confirm or R to reschedule. After every job, each customer gets a thank-you and your Google review link (no incentives, no cherry-picking).</p></details>
   <details><summary>Do you need my Google password?</summary><p>No. You add us as a Manager on your Google Business Profile and can remove us any time.</p></details>
   <details><summary>Can you get me to #1 on Google or guarantee ChatGPT mentions me?</summary><p>No – and be wary of anyone who says they can. We improve the signals Google and AI assistants use, and show you the trend each month.</p></details>
   <details><summary>Do you write fake reviews?</summary><p>Never. Only real customers, no incentives. It's against Google's rules and UK law.</p></details>
@@ -194,7 +198,7 @@
 
 <section id="audit" class="audit">
   <h2>Get your free audit</h2>
-  <p id="pilotNote" class="thanks" hidden>You're applying for the founding pilot: Profile Fix-Up and first month of Findable Monthly free, in exchange for a quick 5-minute online feedback form after 2 weeks (and permission to share your results as a case study). Nothing to pay, no calls needed.</p>
+  <p id="pilotNote" class="thanks" hidden>You're applying for the founding pilot: Profile Fix-Up and first month on Findable Pro free, in exchange for a quick 5-minute online feedback form after 2 weeks (and permission to share your results as a case study). Nothing to pay, no calls needed.</p>
   <p id="snapNote" class="thanks" hidden>Got a Findable snapshot from Nick? Fill this in and you'll get the full version, including what the AI assistants say about you.</p>
   <p>Nick runs the full check – your live Google listing, local map searches and all four AI assistants – and emails you a one-page report within 2 working days. Free, no obligation.</p>
   <form id="auditForm">

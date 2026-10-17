@@ -17,7 +17,7 @@ fieldset{border:0;padding:0;margin:10px 0 18px}.q{border-top:1px solid #eee;padd
 .plans{display:grid;gap:16px;grid-template-columns:1fr}.plan{position:relative;background:#fff;border-radius:var(--r);padding:22px;box-shadow:0 1px 4px #0001;border:2px solid transparent}.plan.feat{border-color:var(--brand)}
 .tag{position:absolute;top:-12px;left:20px;background:var(--acc);font-weight:700;font-size:.75rem;padding:3px 10px;border-radius:999px}
 .plan h3{margin:0}.price{font-size:2.2rem;font-weight:800;margin:.2em 0}.price span{font-size:1rem;font-weight:500;color:var(--muted)}.free{color:var(--brand);font-weight:700;margin:0}.plan ul{padding-left:1.1em;color:var(--muted)}
-.addon{margin-top:16px;background:var(--ink);color:#fff;border-radius:var(--r);padding:18px}.addon p{margin:.3em 0 0;opacity:.85}
+.plan .sub{margin:.15em 0 0;color:var(--brand);font-weight:700;font-size:.95rem}
 details{background:#fff;border-radius:10px;padding:14px;margin:8px 0}summary{font-weight:600;cursor:pointer}
 .tick{display:flex;gap:10px;align-items:flex-start;font-weight:500;min-height:24px}.tick input{width:24px;height:24px;flex:0 0 24px;margin:0;accent-color:var(--brand)}.privacy a{display:inline-block;padding:3px 0}.thanks{background:var(--brand2);padding:14px;border-radius:10px;font-weight:600}
 @media(min-width:720px){.row{display:grid;grid-template-columns:2fr 1fr;gap:14px}.card-grid{grid-template-columns:repeat(3,1fr)}.plans{grid-template-columns:repeat(3,1fr)}.hero{padding-top:70px!important}}
@@ -27,7 +27,7 @@ details{background:#fff;border-radius:10px;padding:14px;margin:8px 0}summary{fon
 
 /* design refresh */
 .ic{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.15em;flex:none}.ic.lg{width:28px;height:28px;color:var(--brand);display:block;margin-bottom:8px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--ink);border:0;border-radius:999px;padding:14px 24px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;box-shadow:0 2px 0 #c98f00;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 #c98f00}.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}.btn-sm{padding:9px 16px;font-size:.9rem}.plan .btn,.addon .btn{margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--ink);border:0;border-radius:999px;padding:14px 24px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;box-shadow:0 2px 0 #c98f00;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 #c98f00}.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}.btn-sm{padding:9px 16px;font-size:.9rem}.plan .btn{margin-top:6px}
 .nav{position:sticky;top:0;z-index:5;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:1px solid #e8e6e0}
 .nav-in{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 20px}
 .logo{display:inline-flex;align-items:center;gap:4px;font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}.logo .ic{color:var(--brand)}
@@ -58,7 +58,7 @@ details{background:#fff;border-radius:10px;padding:14px;margin:8px 0}summary{fon
 /* review fixes */
 input,button,select,textarea{font:inherit}
 .opts span{min-height:44px;display:inline-flex;align-items:center;padding:8px 18px}.opts input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
-.btn-block{width:100%;justify-content:center;padding:13px 20px;font-size:1rem}.plan{display:flex;flex-direction:column}.plan .btn-block{margin-top:auto}.addon .btn-block{width:auto}
+.btn-block{width:100%;justify-content:center;padding:13px 20px;font-size:1rem}.plan{display:flex;flex-direction:column}.plan .btn-block{margin-top:auto}
 .plan:not(.feat) .btn{background:#fff;box-shadow:none;border:2px solid var(--ink)}.plan:not(.feat) .btn:hover{background:var(--brand2);box-shadow:none}
 .tag{color:var(--ink)}
 .foot-links a{min-height:44px}

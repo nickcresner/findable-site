@@ -8,15 +8,15 @@ Audience: plumbers in North London: Finchley, Barnet, Muswell Hill, Hendon, Enfi
 - Free 2-minute self-check on this site (no login)
 - Free full audit (map searches + AI assistants)
 - Profile Fix-Up: £129 one-off (also the setup fee for the monthly plans) — buy: https://buy.stripe.com/14A5kw1Hh7mtazC4xF1Jm00
-- Findable Monthly: start with £129 setup, then £59/month (first month free) — buy: https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01
-- Findable Plus: start with £129 setup, then £99/month (first month free) — buy: https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02
-- Missed-Call Catcher add-on: +£39/month — buy: https://buy.stripe.com/fZu14geu32296jm7JR1Jm03
+- Findable Essentials (visibility): start with £129 setup, then £59/month (first month free). Google posts, review replies, hours and Q&A, monthly map and AI-assistant recheck — buy: https://buy.stripe.com/7sYbIUdpZbCJazC2px1Jm01
+- Findable Pro (visibility + admin automations): start with £129 setup, then £99/month (first month free). Everything in Essentials plus missed-call text-back, appointment confirmations and reminders (reply YES, or R to reschedule) and review requests after every job (no incentives) — buy: https://buy.stripe.com/8x23co71BbCJ37a8NV1Jm02
+- Founding pilot (first 5 North London businesses): Profile Fix-Up free plus the first month on Findable Pro free, in exchange for a 5-minute feedback form and case-study permission — apply: https://findable.london/?offer=pilot#audit
 - A free audit is the recommended first step.
 
 ## How it works
 1. Free audit of Google profile, local map searches and AI answers
 2. Fix-up with customer approval on every change
-3. Monthly posts, review replies and rechecks
+3. Monthly posts, review replies and rechecks; on Pro, missed-call text-back, reminders and review requests
 
 ## Important facts
 - We never ask for Google passwords; customers add us as a Manager
