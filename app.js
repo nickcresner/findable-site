@@ -88,3 +88,10 @@ if(UTM.utm_source==='audit_report')document.getElementById('snapNote').hidden=fa
 function setPilot(){const af=document.getElementById('auditForm');af.offer.value='pilot';document.getElementById('pilotNote').hidden=false;af.querySelector('button[type=submit]').textContent='Apply for the founding pilot'}
 if(new URLSearchParams(location.search).get('offer')==='pilot')setPilot();
 document.querySelector('.pilot-cta').addEventListener('click',e=>{e.preventDefault();setPilot();const q=new URLSearchParams(location.search);q.set('offer','pilot');history.replaceState(null,'','?'+q.toString()+'#audit');goAudit()});
+// Message match for outreach links: ?trade=electrician (or heating) swaps the trade words in the hero. Whitelisted values only.
+(()=>{const T={electrician:{'plumbers':'electricians','a plumber':'an electrician','plumber':'electrician'},heating:{'plumbers':'plumbers and heating engineers','a plumber':'a plumber or heating engineer','plumber':'plumber'}};
+  let t=(new URLSearchParams(location.search).get('trade')||'').toLowerCase();
+  try{if(T[t])sessionStorage.setItem('findable_trade',t);else t=sessionStorage.getItem('findable_trade')||''}catch(e){}
+  const m=T[t];if(!m)return;
+  document.querySelectorAll('[data-t]').forEach(el=>{const v=m[el.dataset.t];if(v)el.textContent=v});
+  document.documentElement.dataset.trade=t;})();

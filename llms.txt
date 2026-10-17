@@ -21,7 +21,10 @@ Audience: plumbers in North London: Finchley, Barnet, Muswell Hill, Hendon, Enfi
 ## Important facts
 - We never ask for Google passwords; customers add us as a Manager
 - No fake reviews, no ranking guarantees
-- Rolling monthly plans, cancel any time
+- Rolling monthly plans, no minimum term, cancel any time by emailing hello@findable.london
+- Not a lead site: no lead fees, credits or shortlist charges; customers find the business on Google and call it directly
+- Monthly plans: pay the £129 setup at checkout; the first monthly payment is 30 days later
+- The Google Business Profile, photos and reviews always belong to the business; Findable is only a Manager and removes itself on cancellation
 
 ## Who's behind it
 - Founded by Nick Cresner, a Finchley local who spent nine years mapping Britain's roads at Navteq and HERE, then worked as a web developer, on a maintenance team and as a property manager.

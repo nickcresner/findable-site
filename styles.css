@@ -73,3 +73,9 @@ input,button,select,textarea{font:inherit}
 .fb fieldset{border:0;margin:0;padding:14px 0}.fb legend{font-weight:700;padding:0;margin-bottom:8px}.fb .opts{margin-bottom:6px}
 textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1.5px solid #d6d9de;border-radius:10px;font-size:1rem;resize:vertical}textarea:focus{outline:2px solid var(--brand);border-color:var(--brand)}
 .foot .fine a{color:#fff;display:inline-block;min-height:24px;line-height:24px}
+/* optimise 2026-10-17: trust row, comparison, pay-today */
+.trust{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;font-weight:600;font-size:.92rem;color:var(--ink)}.trust li{display:inline-flex;align-items:center;gap:6px}.trust .ic{color:var(--brand)}
+.cmp-wrap{background:#fff;border-radius:var(--r);box-shadow:0 1px 4px #0001;overflow:hidden}
+.cmp{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.92rem}.cmp th,.cmp td{padding:10px 10px;text-align:left;vertical-align:top;border-top:1px solid #eee;overflow-wrap:anywhere}.cmp thead th{border-top:0;background:#f6f7f9;font-size:.85rem}.cmp thead th:last-child{background:var(--brand2);color:var(--ink)}.cmp td:last-child{background:#f4fbf9;font-weight:600}.cmp tbody th{color:var(--ink);width:28%}.cmp td{color:var(--muted)}.cmp td:last-child{color:var(--ink)}
+@media(max-width:719px){.cmp{font-size:.82rem}.cmp th,.cmp td{padding:8px 6px}}
+.paynow{background:#fff;border:1px solid #e6e3dc;border-radius:10px;padding:10px 14px;font-size:.95rem;margin:8px 0}
