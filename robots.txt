@@ -1,3 +1,28 @@
+# findable.london robots.txt (updated 2026-10-18)
+# We want to be found and cited by search engines and AI assistants, so their crawlers are explicitly allowed.
+# Search/answer crawlers (decide whether we can appear and be cited in AI answers):
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+Allow: /
+
+# Model-training crawlers: also allowed, so assistants answering from built-in knowledge can learn who we are.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Meta-ExternalAgent
+Allow: /
+
 User-agent: *
 Allow: /
 
