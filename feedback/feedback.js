@@ -1,4 +1,4 @@
-// Findable pilot feedback form -> FormSubmit (same endpoint as the audit form, delivered to hello@findable.london).
+// Findable London pilot feedback form -> FormSubmit (same endpoint as the audit form, delivered to hello@findable.london).
 const FB_ENDPOINT='https://formsubmit.co/ajax/39503e9df3f6e78db33e8f0d00a79949';
 const f=document.getElementById('fbForm'),err=document.getElementById('fbErr'),thx=document.getElementById('fbThanks');
 // Prefill from the emailed link: /feedback/?b=<report-slug>&n=<Business name>
@@ -14,7 +14,7 @@ f.addEventListener('submit',async e=>{
   err.hidden=!missing.length;err.textContent=missing.length?'Please fill in: '+missing.join(', ')+'.':'';if(missing.length){err.scrollIntoView({block:'center'});return}
   const req={};for(const [k,v] of fd.entries()){if(k==='_honey')continue;req[k]=req[k]?req[k]+'; '+v:v}
   ['results','would_pay'].forEach(k=>{if(!req[k])req[k]='(none ticked)'});
-  req._subject='Findable pilot feedback: '+req.business+(req.case_study==='yes'?' (case study OK)':'');req._template='table';req._captcha='false';
+  req._subject='Findable London pilot feedback: '+req.business+(req.case_study==='yes'?' (case study OK)':'');req._template='table';req._captcha='false';
   const btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending…';
   try{
     const r=await fetch(FB_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(req)});

@@ -1,4 +1,4 @@
-// Findable self-check: all client-side, nothing is sent anywhere.
+// Findable London self-check: all client-side, nothing is sent anywhere.
 // Outreach variant from ?utm_* (kept for this tab only, in sessionStorage – no cookies).
 const UTM=(()=>{const q=new URLSearchParams(location.search),o={};['utm_source','utm_medium','utm_campaign','utm_content'].forEach(k=>{const v=q.get(k);if(v)o[k]=v.slice(0,80)});
   try{if(Object.keys(o).length){sessionStorage.setItem('findable_utm',JSON.stringify(o));return o}return JSON.parse(sessionStorage.getItem('findable_utm')||'{}')}catch(e){return o}})();
@@ -57,7 +57,7 @@ document.getElementById('auditForm').addEventListener('submit',async e=>{
   const req=Object.fromEntries(new FormData(f));
   if(req._honey)return; // bot
   delete req.consent;req.consent='yes';Object.assign(req,UTM);req.selfScore=f.dataset.selfScore||'not taken';
-  req.offer=req.offer||'standard';req._subject=req.offer==='pilot'?'New Findable FOUNDING PILOT request':'New Findable audit request';req._template='table';req._captcha='false';
+  req.offer=req.offer||'standard';req._subject=req.offer==='pilot'?'New Findable London FOUNDING PILOT request':'New Findable London audit request';req._template='table';req._captcha='false';
   const btn=f.querySelector('button[type=submit]'),t=document.getElementById('auditThanks');
   btn.disabled=true;btn.textContent='Sending…';
   try{
