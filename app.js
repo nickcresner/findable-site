@@ -95,3 +95,6 @@ document.querySelector('.pilot-cta').addEventListener('click',e=>{e.preventDefau
   const m=T[t];if(!m)return;
   document.querySelectorAll('[data-t]').forEach(el=>{const v=m[el.dataset.t];if(v)el.textContent=v});
   document.documentElement.dataset.trade=t;})();
+
+// Outreach visitors: a reply is the lowest-friction next step (22 Oct 2026). Shown only when the visit came from an outreach link.
+(()=>{const n=document.getElementById('replyNote');if(n&&UTM.utm_medium==='outreach')n.hidden=false})();

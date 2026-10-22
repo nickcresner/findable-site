@@ -101,3 +101,6 @@ textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1.5px solid
 .progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);z-index:50;display:none}
 @supports (animation-timeline: scroll()){@media(prefers-reduced-motion:no-preference){.progress{display:block;animation:grow linear both;animation-timeline:scroll(root)}@keyframes grow{to{transform:scaleX(1)}}}}
 .guide a.btn{color:var(--ink)}.guide a.btn-ghost{color:var(--brand)}
+
+/* Outreach visitors (?utm_medium=outreach): reply-first note, added 22 Oct 2026 */
+.replynote{margin:0 0 14px;padding:10px 14px;border-left:4px solid var(--brand);background:var(--brand2);border-radius:10px;font-size:.98rem;line-height:1.45;color:var(--ink)}.replynote .sig{white-space:nowrap;color:var(--muted)}.replynote .sig::before{content:"\2014\00a0"}
