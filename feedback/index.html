@@ -3,75 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pilot feedback – Findable London</title>
-<meta name="description" content="Five-minute feedback form for Findable London founding pilot customers. Seven quick questions, no call needed.">
-<meta name="robots" content="noindex,nofollow">
-<link rel="canonical" href="https://findable.london/feedback/">
+<title>Findable London has closed</title>
+<meta name="description" content="Findable London has closed. Nick now works on digital and AI services at nickcresner.com.">
+<link rel="canonical" href="https://findable.london/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{display:flex;align-items:center;justify-content:center;padding:24px;background:#F5F7FB;color:#14213D;font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:560px;width:100%;background:#fff;border-radius:16px;padding:40px 36px;box-shadow:0 1px 3px rgba(20,33,61,.08),0 8px 24px rgba(20,33,61,.06)}
+.brand{font:700 15px/1 Manrope,Inter,system-ui,sans-serif;letter-spacing:.02em;color:#2D5BE3;margin:0 0 20px}
+h1{font:800 clamp(28px,5vw,36px)/1.2 Manrope,Inter,system-ui,sans-serif;margin:0 0 16px;color:#14213D}
+p{margin:0 0 14px}
+.btn{display:inline-block;margin:10px 0 6px;padding:12px 22px;border-radius:10px;background:#2D5BE3;color:#fff;font:700 16px/1.2 Manrope,Inter,system-ui,sans-serif;text-decoration:none}
+.btn:hover,.btn:focus-visible{background:#14213D}
+.btn:focus-visible{outline:3px solid #2D5BE3;outline-offset:3px}
+.privacy{margin-top:28px;padding-top:18px;border-top:1px solid #E3E8F2;font-size:14px;color:#4A5670}
+.privacy a{color:#2D5BE3}
+</style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
-</svg>
-<header class="nav">
-  <div class="nav-in">
-    <a class="logo" href="/"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Findable London</a>
-  </div>
-</header>
-<main id="top">
-<section class="audit fb">
-  <h1>Your pilot feedback</h1>
-  <p class="lead">Thanks for being one of our founding pilot customers. This takes about 5 minutes: 7 quick questions, no call needed. Honest answers help most, good or bad.</p>
-  <form id="fbForm" novalidate>
-    <label>Your name<input name="name" required autocomplete="name"></label>
-    <label>Business name<input name="business" required autocomplete="organization"></label>
-    <input type="hidden" name="ref" value="">
-
-    <fieldset class="q" id="q1"><legend>1. How easy has the pilot been for you so far?</legend>
-      <div class="opts"><label><input type="radio" name="ease" value="1 - very hard" required><span>Very hard</span></label><label><input type="radio" name="ease" value="2 - quite hard"><span>Quite hard</span></label><label><input type="radio" name="ease" value="3 - okay"><span>Okay</span></label><label><input type="radio" name="ease" value="4 - easy"><span>Easy</span></label><label><input type="radio" name="ease" value="5 - very easy"><span>Very easy</span></label></div>
-    </fieldset>
-
-    <fieldset class="q" id="q2"><legend>2. What have you noticed since we started? Tick any that apply.</legend>
-      <div class="opts"><label><input type="checkbox" name="results" value="more calls"><span>More calls</span></label><label><input type="checkbox" name="results" value="more messages or enquiries"><span>More messages or enquiries</span></label><label><input type="checkbox" name="results" value="more reviews"><span>More reviews</span></label><label><input type="checkbox" name="results" value="customers mention Google or AI"><span>Customers mention Google or AI</span></label><label><input type="checkbox" name="results" value="nothing yet"><span>Nothing yet</span></label><label><input type="checkbox" name="results" value="too early to say"><span>Too early to say</span></label></div>
-      <label>Anything specific? (optional)<textarea name="results_detail" rows="2" maxlength="600"></textarea></label>
-    </fieldset>
-
-    <fieldset class="q" id="q3"><legend>3. What's your biggest admin headache right now?</legend>
-      <div class="opts"><label><input type="radio" name="admin_pain" value="quotes and invoices" required><span>Quotes and invoices</span></label><label><input type="radio" name="admin_pain" value="chasing payments"><span>Chasing payments</span></label><label><input type="radio" name="admin_pain" value="booking and diary"><span>Booking and diary</span></label><label><input type="radio" name="admin_pain" value="answering calls and messages"><span>Answering calls and messages</span></label><label><input type="radio" name="admin_pain" value="getting reviews"><span>Getting reviews</span></label><label><input type="radio" name="admin_pain" value="certificates and paperwork"><span>Certificates and paperwork</span></label><label><input type="radio" name="admin_pain" value="other"><span>Something else</span></label></div>
-      <label>Tell us more (optional)<textarea name="admin_pain_detail" rows="2" maxlength="600"></textarea></label>
-    </fieldset>
-
-    <fieldset class="q" id="q4"><legend>4. Have you tried any AI tools (like ChatGPT) for your business?</legend>
-      <div class="opts"><label><input type="radio" name="ai_tools" value="use them regularly" required><span>Yes, regularly</span></label><label><input type="radio" name="ai_tools" value="tried a few times"><span>Tried a few times</span></label><label><input type="radio" name="ai_tools" value="not yet, interested"><span>Not yet, but interested</span></label><label><input type="radio" name="ai_tools" value="not interested"><span>Not interested</span></label></div>
-      <label>Which ones, and for what? (optional)<input name="ai_tools_detail" maxlength="300"></label>
-    </fieldset>
-
-    <fieldset class="q" id="q5"><legend>5. After the pilot, which of these would you pay for? Tick any.</legend>
-      <div class="opts"><label><input type="checkbox" name="would_pay" value="Findable Essentials (£59/mo)"><span>Findable Essentials, £59/month (stay findable)</span></label><label><input type="checkbox" name="would_pay" value="Findable Pro (£99/mo)"><span>Findable Pro, £99/month (findable + missed-call texts, reminders, review requests)</span></label><label><input type="checkbox" name="would_pay" value="hands-on AI setup service"><span>Hands-on AI setup: we set up AI tools for your quotes, messages and admin, and show you how</span></label><label><input type="checkbox" name="would_pay" value="none right now"><span>None right now</span></label></div>
-      <label>What would feel like a fair price? (optional)<input name="fair_price" maxlength="200"></label>
-    </fieldset>
-
-    <fieldset class="q" id="q6"><legend id="q6l">6. One thing we could do better? (optional)</legend>
-      <textarea id="better" name="better" rows="3" maxlength="1000" aria-labelledby="q6l"></textarea>
-    </fieldset>
-
-    <fieldset class="q" id="q7"><legend>7. Can we share your results as a short case study (your business name and before-and-after numbers)?</legend>
-      <div class="opts"><label><input type="radio" name="case_study" value="yes" required><span>Yes</span></label><label><input type="radio" name="case_study" value="no"><span>No</span></label></div>
-      <p class="small">We'll send you the wording to check before anything is published.</p>
-    </fieldset>
-
-    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-    <p id="fbErr" class="err" role="alert" hidden></p>
-    <button class="btn" type="submit">Send my feedback</button>
-  </form>
-  <p id="fbThanks" class="thanks" role="status" hidden></p>
-  <p class="small privacy"><b>Privacy:</b> your answers come to us by email via FormSubmit and are used only to improve Findable London (and for a case study only if you said yes). Never sold or shared. To see or delete them, email <a href="mailto:hello@findable.london">hello@findable.london</a>.</p>
-</section>
+<main>
+  <p class="brand">Findable London</p>
+  <h1>Findable London has closed.</h1>
+  <p>Thank you for visiting.</p>
+  <p>Nick now works on digital and AI services at <a href="https://nickcresner.com" style="color:#2D5BE3">nickcresner.com</a>.</p>
+  <a class="btn" href="https://nickcresner.com">Go to nickcresner.com</a>
+  <p class="privacy">Privacy: if you have a data request about Findable London, you can still email <a href="mailto:hello@findable.london">hello@findable.london</a>.</p>
 </main>
-<footer class="foot">
-  <p class="fine">© 2026 Findable London · <a href="/">findable.london</a> · <a href="mailto:hello@findable.london">hello@findable.london</a></p>
-</footer>
-<script src="/feedback/feedback.js"></script>
 </body>
 </html>
