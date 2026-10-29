@@ -33,6 +33,8 @@ Audience: plumbers (and, in a test, electricians) in North London and Hertfordsh
 
 ## Who's behind it
 - Founded by Nick Cresner, a Finchley local who spent nine years mapping Britain's roads at Navteq and HERE, then worked as a web developer, on a maintenance team and as a property manager.
+- Nick Cresner online: https://www.linkedin.com/in/nickcresner/ and https://nickcresner.com/
+- Not affiliated with Google. Findable London never asks for a Google password or verification code, never takes payment over the phone and never threatens to remove a listing; the business stays the owner and adds Findable London as a Manager itself.
 
 ## Contact
 Request a free audit via the form at https://findable.london/#audit (submissions are emailed to us; we reply within 2 working days), or email hello@findable.london
